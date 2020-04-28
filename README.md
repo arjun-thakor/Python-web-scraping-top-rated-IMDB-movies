@@ -1,6 +1,6 @@
-# Getting and Visualizing stock data using Python
+# Web scraping IMDB Top rated movies using Python
 
-This code explores the yfinance library to get stock data from yahoo finance, and altair to visualize the data.
+Simple python script that scrape movies data and export to csv, excel and HTML table using Python libraries such as BeautifulSoup, Requests, Pandas and NumPy.
 
 ![](Chart.png)
 
@@ -9,23 +9,28 @@ This code explores the yfinance library to get stock data from yahoo finance, an
 Use the package manager [pip](https://pypi.org/) to install packages.
 
 ```bash
+pip install beautifulsoup
 pip install pandas
-pip install yfinance
-pip install altair
+pip install numpy
+pip install requests
 ```
 
 ## Usage
 
 ```python
-import yfinance as yf
-import altair as alt
+from bs4 import BeautifulSoup
+import requests
 import pandas as pd
+from IPython.display import HTML
+import numpy as np
 
-# Define a function take an argument as a company name
-def get_data(company_name):
-
-# Call the function by passing the name of the company as 'GOOGL'
-get_data('GOOGL')
+# Code snippet
+# finding and iterating the table to save name of the movie
+names = []
+for row in table.find_all('tr'):
+    for cell in row.find_all('td', class_='titleColumn'):
+        for link in cell.find_all('a'):
+            names.append(link.text)
 ```
 
 
