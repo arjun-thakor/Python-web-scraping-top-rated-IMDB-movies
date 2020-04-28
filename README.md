@@ -2,7 +2,7 @@
 
 Simple python script that scrape movies data and export to csv, excel and HTML table using Python libraries such as BeautifulSoup, Requests, Pandas and NumPy.
 
-![](Chart.png)
+![](screenshot.png)
 
 ## Installation
 
