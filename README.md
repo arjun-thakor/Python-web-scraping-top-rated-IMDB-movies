@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+# Getting and Visualizing stock data using Python
 
-You can use the [editor on GitHub](https://github.com/arjun-thakor/Python-web-scraping-top-rated-IMDB-movies/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This code explores the yfinance library to get stock data from yahoo finance, and altair to visualize the data.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![](Chart.png)
 
-### Markdown
+## Installation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Use the package manager [pip](https://pypi.org/) to install packages.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+pip install pandas
+pip install yfinance
+pip install altair
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Usage
 
-### Jekyll Themes
+```python
+import yfinance as yf
+import altair as alt
+import pandas as pd
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/arjun-thakor/Python-web-scraping-top-rated-IMDB-movies/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Define a function take an argument as a company name
+def get_data(company_name):
 
-### Support or Contact
+# Call the function by passing the name of the company as 'GOOGL'
+get_data('GOOGL')
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
